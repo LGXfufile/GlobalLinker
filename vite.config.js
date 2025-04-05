@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: '/',
+  base: './',
   plugins: [
     vue(),
   ],
@@ -15,7 +15,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/styles/variables.scss" as *;`
+        additionalData: `@use "sass:math"; @use "@/styles/variables.scss" as *;`
       }
     }
   },
